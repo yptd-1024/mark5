@@ -30,7 +30,7 @@ function normalizeText(text) {
         z-index: 9999;
       `;
       const tagCSS = data.tagCSS && data.tagCSS.trim() !== '' ? data.tagCSS : defaultCSS;
-      const listMode = data.listMode || 'local'; // 默认仅本地
+      const listMode = data.listMode || 'both'; // 默认本地和远程同时
       const repoUrl = data.repoUrl || 'yptd-1024/mark5';
   
       let userList = [];
