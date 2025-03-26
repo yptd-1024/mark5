@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Mark5",
+    "version": "1.0",
+    "description": "为特定用户添加自定义标签的 Chrome 插件",
+    "permissions": ["storage"],
+    "content_scripts": [
+      {
+        "matches": ["*://*.t66y.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "options_page": "options.html",
+    "icons": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }

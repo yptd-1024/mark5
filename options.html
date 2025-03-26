@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mark5 设置</title>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    textarea, input, select { width: 300px; }
+    textarea { height: 100px; }
+    #save { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Mark5 设置</h2>
+  <label>本地用户清单（英文逗号分隔，例如：张三,李四,王五）:</label><br>
+  <textarea id="userList"></textarea><br>
+  <label>用户清单模式:</label><br>
+  <select id="listMode">
+    <option value="local">仅本地</option>
+    <option value="remote">仅远程</option>
+    <option value="both">本地和远程同时</option>
+  </select><br>
+  <label>GitHub 仓库地址（例如：https://github.com/yptd-1024/mark5 ）:</label><br>
+  <input type="text" id="repoUrl"><br>
+  <label>标签内容（例如：五毛）:</label><br>
+  <input type="text" id="tagContent"><br>
+  <label>标签 CSS 样式（留空使用默认：12px 红色文字，2px 红色边框）:</label><br>
+  <textarea id="tagCSS"></textarea><br>
+  <button id="save">保存</button>
+  <p id="status"></p>
+  <script src="options.js"></script>
+</body>
+</html>
