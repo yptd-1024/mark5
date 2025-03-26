@@ -17,7 +17,7 @@ document.getElementById('save').addEventListener('click', () => {
   chrome.storage.sync.get(['userList', 'listMode', 'repoUrl', 'tagContent', 'tagCSS'], (data) => {
     document.getElementById('userList').value = data.userList || '';
     document.getElementById('listMode').value = data.listMode || 'local';
-    document.getElementById('repoUrl').value = data.repoUrl || 'https://github.com/yptd-1024/mark5';
+    document.getElementById('repoUrl').value = data.repoUrl || 'yptd-1024/mark5';
     document.getElementById('tagContent').value = data.tagContent || '五毛';
     document.getElementById('tagCSS').value = data.tagCSS || `
       position: absolute;
