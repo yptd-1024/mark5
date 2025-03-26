@@ -6,7 +6,7 @@ function normalizeText(text) {
   // 从 GitHub 获取远程用户清单
   async function fetchRemoteUserList(repoUrl) {
     try {
-      const response = await fetch(`${repoUrl}/raw/main/userlist.txt`);
+      const response = await fetch(`https://raw.githubusercontent.com/${repoUrl}/main/userlist.txt`);
       if (!response.ok) throw new Error('无法获取远程用户清单');
       const text = await response.text();
       return text.split(',').map(u => normalizeText(u)).filter(u => u.length > 0);
@@ -31,7 +31,7 @@ function normalizeText(text) {
       `;
       const tagCSS = data.tagCSS && data.tagCSS.trim() !== '' ? data.tagCSS : defaultCSS;
       const listMode = data.listMode || 'local'; // 默认仅本地
-      const repoUrl = data.repoUrl || 'https://github.com/yptd-1024/mark5';
+      const repoUrl = data.repoUrl || 'yptd-1024/mark5';
   
       let userList = [];
       if (listMode === 'local') {
